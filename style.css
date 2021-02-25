@@ -1,0 +1,51 @@
+.custom-ol {
+    padding: 24px 32px;
+    box-shadow: 0 4px 16px -3px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    margin: 24px auto;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    color: #073b4c;
+}
+
+.custom-ol h2 {
+    font-size: 28px;
+}
+
+.custom-ol ol {
+    margin: 0;
+    padding: 0;
+    margin-top: 32px;
+    list-style: none;
+    counter-reset: web-design;
+}
+
+.custom-ol ol li {
+    margin: 28px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: all 400ms;
+}
+
+.custom-ol ol li:hover {
+    background: #ffd166;
+}
+
+.custom-ol ol li::before {
+    content: counter(web-design);
+    counter-increment: web-design;
+    margin-right: 24px;
+    font-size: 32px;
+    font-weight: bold;
+    background: #0071a7;
+    padding: 8px 16px;
+    border-radius: 0 8px 0 8px;
+    color: #eee;
+    transition: all 400ms;
+}
+
+.custom-ol ol li:hover::before {
+    background: #073b4c;
+    transform: scale(1.2) rotate(-5deg);
+}
